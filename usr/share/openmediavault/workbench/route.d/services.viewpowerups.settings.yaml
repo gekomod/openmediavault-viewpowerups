@@ -1,0 +1,7 @@
+version: "1.0"
+type: route
+data:
+  url: "/services/viewpowerups/settings"
+  title: _("ViewPower Ups")
+  editing: true
+  component: omv-services-viewpowerups-settings-form-page

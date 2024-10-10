@@ -1,0 +1,6 @@
+version: "1.0"
+type: route
+data:
+  url: "/diagnostics/services/viewpowerups"
+  title: _("ViewPower UPS")
+  component: omv-diagnostics-services-viewpowerups-text-page

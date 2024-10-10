@@ -1,0 +1,7 @@
+version: "1.0"
+type: navigation-item
+data:
+  path: "services.viewpowerups"
+  text: _("ViewPowerUps")
+  icon: "mdi:flash-outline"
+  url: "/services/viewpowerups"

@@ -1,0 +1,17 @@
+[{
+	"type": "rpc",
+	"id": "rpc.viewpowerups.setsettings",
+	"params": {
+		"type": "object",
+		"properties": {
+			"enable": {
+				"type": "boolean",
+				"required": true
+			},
+			"urlViewPower": {
+				"type": "string",
+				"required": true
+			}
+		}
+	}
+}]

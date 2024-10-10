@@ -1,0 +1,19 @@
+{
+	"type": "config",
+	"id": "conf.service.viewpowerups",
+	"title": "VIEWPOWERUPS",
+	"queryinfo": {
+		"xpath": "//services/viewpowerups",
+		"iterable": false
+	},
+	"properties": {
+		"enable": {
+			"type": "boolean",
+			"default": false
+		},
+		"urlViewPower": {
+			"type": "string",
+			"default": ""
+		}
+	}
+}

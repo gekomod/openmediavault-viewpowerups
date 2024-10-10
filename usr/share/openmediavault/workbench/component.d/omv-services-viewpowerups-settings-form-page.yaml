@@ -1,0 +1,27 @@
+version: "1.0"
+type: component
+data:
+  name: omv-services-viewpowerups-settings-form-page
+  type: formPage
+  config:
+    request:
+      service: viewpowerups
+      get:
+        method: getSettings
+      post:
+        method: setSettings
+    fields:
+      - type: checkbox
+        name: enable
+        label: _("Enable")
+        value: false
+      - type: textInput
+        name: urlViewPower
+        label: _("ViewPower Json Url")
+        value: true
+    buttons:
+      - template: submit
+      - template: cancel
+        execute:
+          type: url
+          url: "/services/viewpowerups"
