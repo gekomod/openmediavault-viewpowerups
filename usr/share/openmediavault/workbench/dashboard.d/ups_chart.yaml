@@ -10,7 +10,7 @@ data:
   reloadPeriod: 5000
   chart:
     type: gauge
-    maxHeight: "150px"
+    maxHeight: "80px"
     min: 0
     max: 100
     displayValue: true

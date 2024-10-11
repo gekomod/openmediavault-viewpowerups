@@ -79,7 +79,8 @@ Napięcie Wyjsciowe: '.$outputVoltage.'';
 	       $this->validateMethodContext($context, [
                        "role" => OMV_ROLE_ADMINISTRATOR
 	       ]);
-	$result = $obj['workInfo'];
+        $data = ['batteryCapacity' => ''.$obj['workInfo']['batteryCapacity'].'', 'enable'=>'true'];
+        $result = $data;
         }
 	return $result;
     }
