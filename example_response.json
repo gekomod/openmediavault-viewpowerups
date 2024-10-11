@@ -1,0 +1,808 @@
+
+
+{
+  "capability": null,
+  "customer": "ViewPower",
+  "customerLogo": "",
+  "customerViewpower": "ViewPower",
+  "customized": "ViewPower",
+  "eventFileName": "",
+  "historyColumns": {
+    "colid": 0,
+    "columns": [
+      {
+        "datafield": "currentTime",
+        "headertext": "[text.mv.col1]",
+        "id": "",
+        "labelFunction": "displayDate"
+      },
+      {
+        "datafield": "inputVoltage",
+        "headertext": "[text.inputV]",
+        "id": "inputV1",
+        "labelFunction": ""
+      },
+      {
+        "datafield": "inputFrequency",
+        "headertext": "[text.inputF]",
+        "id": "",
+        "labelFunction": "displayInputFrequency"
+      },
+      {
+        "datafield": "outputVoltage",
+        "headertext": "[text.outputV]",
+        "id": "outputVR",
+        "labelFunction": ""
+      },
+      {
+        "datafield": "outputFrequency",
+        "headertext": "[text.outputF]",
+        "id": "",
+        "labelFunction": ""
+      },
+      {
+        "datafield": "outputCurrent",
+        "headertext": "[text.loadEle]",
+        "id": "",
+        "labelFunction": "displayOutputCurrent"
+      },
+      {
+        "datafield": "outputLoadPercent",
+        "headertext": "[label.loadPercents]",
+        "id": "",
+        "labelFunction": "displayOutpuLoadPercents"
+      },
+      {
+        "datafield": "batteryVoltage",
+        "headertext": "[text.BTV]",
+        "id": "",
+        "labelFunction": ""
+      },
+      {
+        "datafield": "temperatureView",
+        "headertext": "[text.upsTemperature]",
+        "id": "",
+        "labelFunction": "calTemp"
+      }
+    ]
+  },
+  "hostName": "172.19.0.1",
+  "menuList": {
+    "menuList": [
+      {
+        "data": "system",
+        "items": [
+          {
+            "item": {
+              "data": "password",
+              "groupName": "menu",
+              "label": "[label.passwordSet]",
+              "type": ""
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "mobile",
+              "groupName": "menu",
+              "label": "[label.smsinfoSet]",
+              "type": ""
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "email",
+              "groupName": "menu",
+              "label": "[label.emailSet]",
+              "type": ""
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "eleEvent",
+              "groupName": "menu",
+              "label": "[label.electricEventSet]",
+              "type": ""
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "network",
+              "groupName": "menu",
+              "label": "[label.netWeakUPSet]",
+              "type": ""
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "setcom",
+              "groupName": "menu",
+              "label": "[label.setcom]",
+              "type": ""
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "recorddata",
+              "groupName": "menu",
+              "label": "[label.recorddata]",
+              "type": ""
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "modbus",
+              "groupName": "menu",
+              "label": "[label.modbussetting]",
+              "type": ""
+            },
+            "items": []
+          }
+        ],
+        "label": "[label.config]"
+      },
+      {
+        "data": "config",
+        "items": [
+          {
+            "item": {
+              "data": "loadClose",
+              "groupName": "menu",
+              "label": "[label.shutdownParamSet]",
+              "type": ""
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "remoteLoadClose",
+              "groupName": "menu",
+              "label": "[label.remoteShutdownParamSet]",
+              "type": ""
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "buy",
+              "groupName": "menu",
+              "label": "[label.upsBurInfoSet]",
+              "type": ""
+            },
+            "items": []
+          }
+        ],
+        "label": "[label.upsSet]"
+      },
+      {
+        "data": "control",
+        "items": [
+          {
+            "item": {
+              "data": "onOff",
+              "groupName": "menu",
+              "label": "[label.realTimeCtrl]",
+              "type": ""
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "onOffPlan",
+              "groupName": "menu",
+              "label": "[label.powerPlan]",
+              "type": ""
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "testPlan",
+              "groupName": "menu",
+              "label": "[label.autoTestPlan]",
+              "type": ""
+            },
+            "items": []
+          }
+        ],
+        "label": "[label.controlPlatform]"
+      },
+      {
+        "data": "monitor",
+        "items": [
+          {
+            "item": {
+              "data": "immediately",
+              "groupName": "menu",
+              "label": "[label.realInfoView]",
+              "type": ""
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "historyInfo",
+              "groupName": "menu",
+              "label": "[label.historyInfoView]",
+              "type": ""
+            },
+            "items": []
+          }
+        ],
+        "label": "[label.upsWatch]"
+      },
+      {
+        "data": "top",
+        "items": [
+          {
+            "item": {
+              "data": "temperature",
+              "groupName": "",
+              "label": "[label.temperatureUnit]",
+              "type": ""
+            },
+            "items": [
+              {
+                "data": "celsiur",
+                "groupName": "temp",
+                "label": "[label.Celsius]",
+                "type": "radio"
+              },
+              {
+                "data": "fahrenheit",
+                "groupName": "temp",
+                "label": "[label.Fahrenheit]",
+                "type": "radio"
+              }
+            ]
+          },
+          {
+            "item": {
+              "data": "requireState",
+              "groupName": "",
+              "label": "[label.dateFormat]",
+              "type": ""
+            },
+            "items": [
+              {
+                "data": "YYYY-MM-DD",
+                "groupName": "date",
+                "label": "YYYY-MM-DD",
+                "type": "radio"
+              },
+              {
+                "data": "YYYY/MM/DD",
+                "groupName": "date",
+                "label": "YYYY/MM/DD",
+                "type": "radio"
+              },
+              {
+                "data": "YYYY:MM:DD",
+                "groupName": "date",
+                "label": "YYYY:MM:DD",
+                "type": "radio"
+              },
+              {
+                "data": "MM-DD-YYYY",
+                "groupName": "date",
+                "label": "MM-DD-YYYY",
+                "type": "radio"
+              },
+              {
+                "data": "MM/DD/YYYY",
+                "groupName": "date",
+                "label": "MM/DD/YYYY",
+                "type": "radio"
+              },
+              {
+                "data": "MM:DD:YYYY",
+                "groupName": "date",
+                "label": "MM:DD:YYYY",
+                "type": "radio"
+              },
+              {
+                "data": "DD-MM-YYYY",
+                "groupName": "date",
+                "label": "DD-MM-YYYY",
+                "type": "radio"
+              },
+              {
+                "data": "DD/MM/YYYY",
+                "groupName": "date",
+                "label": "DD/MM/YYYY",
+                "type": "radio"
+              },
+              {
+                "data": "DD:MM:YYYY",
+                "groupName": "date",
+                "label": "DD:MM:YYYY",
+                "type": "radio"
+              }
+            ]
+          }
+        ],
+        "label": "[label.systemStyle]"
+      },
+      {
+        "data": "top",
+        "items": [
+          {
+            "item": {
+              "data": "English",
+              "groupName": "language",
+              "label": "English",
+              "type": "radio"
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "French",
+              "groupName": "language",
+              "label": "French",
+              "type": "radio"
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "German",
+              "groupName": "language",
+              "label": "German",
+              "type": "radio"
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "Italian",
+              "groupName": "language",
+              "label": "Italian",
+              "type": "radio"
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "Polish",
+              "groupName": "language",
+              "label": "Polish",
+              "type": "radio"
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "Portuguese",
+              "groupName": "language",
+              "label": "Portuguese",
+              "type": "radio"
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "Russian",
+              "groupName": "language",
+              "label": "Russian",
+              "type": "radio"
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "Spanish",
+              "groupName": "language",
+              "label": "Spanish",
+              "type": "radio"
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "Ukrainian",
+              "groupName": "language",
+              "label": "Ukrainian",
+              "type": "radio"
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "Turkish",
+              "groupName": "language",
+              "label": "Turkish",
+              "type": "radio"
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "Czech",
+              "groupName": "language",
+              "label": "Czech",
+              "type": "radio"
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "Chinese",
+              "groupName": "language",
+              "label": "Chinese(Simplified)",
+              "type": "radio"
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "ChineseTW",
+              "groupName": "language",
+              "label": "Chinese(Traditional)",
+              "type": "radio"
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "Japanese",
+              "groupName": "language",
+              "label": "Japanese",
+              "type": "radio"
+            },
+            "items": []
+          }
+        ],
+        "label": "[label.language]"
+      },
+      {
+        "data": "top",
+        "items": [
+          {
+            "item": {
+              "data": "copyRight",
+              "groupName": "",
+              "label": "[label.copyRight]",
+              "type": ""
+            },
+            "items": []
+          },
+          {
+            "item": {
+              "data": "systemHelp_en",
+              "groupName": "",
+              "label": "[label.systemHelp]",
+              "type": ""
+            },
+            "items": []
+          }
+        ],
+        "label": "[label.Help]"
+      }
+    ]
+  },
+  "modules": null,
+  "portName": "USBusbdev3",
+  "protocolType": "PMV",
+  "refreshSearchUPSTree": "",
+  "refreshSearchingUPS": false,
+  "refreshTree": "2024-10-07 15:04:20",
+  "selectDevice": "",
+  "serverName": "ViewPower",
+  "showLocalUPS": true,
+  "showNetSNMP": false,
+  "snmp": false,
+  "snmpInfo": {
+    "janitorWarning1": "",
+    "janitorWarning1Unit": "",
+    "janitorWarning2": "",
+    "janitorWarning2Unit": "",
+    "janitorWarning3": "",
+    "janitorWarning3Unit": "",
+    "janitorWarning4": "",
+    "janitorWarning4Unit": "",
+    "smogPercent": "",
+    "smogPercentUnit": "",
+    "workHumidity": "",
+    "workHumidityUnit": "",
+    "workTemperature": "",
+    "workTemperatureUnit": ""
+  },
+  "statuspowerflow": {
+    "battery": [
+      {
+        "caption": "[text.BTV]:",
+        "textvalue": "{workInfo.batteryVoltage}",
+        "unit": "V"
+      },
+      {
+        "caption": "[text.BatteryPercent]:",
+        "textvalue": "{workInfo.batteryCapacity}",
+        "unit": "%"
+      }
+    ],
+    "bypassInfoLines": [],
+    "input": [
+      {
+        "caption": "[text.inputV]:",
+        "textvalue": "{workInfo.inputVoltage}",
+        "unit": "V"
+      }
+    ],
+    "inverterInfoLines": [],
+    "output": [
+      {
+        "caption": "[text.outputV]:",
+        "textvalue": "{workInfo.outputVoltage}",
+        "unit": "V"
+      },
+      {
+        "caption": "[text.outputF]:",
+        "textvalue": "{workInfo.outputFrequency}",
+        "unit": "Hz"
+      },
+      {
+        "caption": "[label.loadPercents]:",
+        "textvalue": "{workInfo.outputLoadPercent}",
+        "unit": "%"
+      }
+    ],
+    "solarInfoLines": [],
+    "upsInfo": [
+      {
+        "caption": "[text.workMod]:",
+        "textvalue": "{workInfo.workMode}",
+        "unit": ""
+      }
+    ]
+  },
+  "statusupsinfo": {
+    "info": [
+      {
+        "label": "[label.inputInfo]",
+        "lines": [
+          {
+            "caption": "[text.inputV]",
+            "textvalue": "{workInfo.inputVoltage}",
+            "unit": "V"
+          }
+        ]
+      },
+      {
+        "label": "[label.upsInfo]",
+        "lines": [
+          {
+            "caption": "[text.workMod]",
+            "textvalue": "{workInfo.workMode}",
+            "unit": ""
+          }
+        ]
+      },
+      {
+        "label": "[label.batteryInfo]",
+        "lines": [
+          {
+            "caption": "[text.mv.col4]",
+            "textvalue": "{workInfo.batteryVoltage}",
+            "unit": "V"
+          },
+          {
+            "caption": "[text.BatteryPercent]",
+            "textvalue": "{workInfo.batteryCapacity}",
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "label": "[label.outputInfo]",
+        "lines": [
+          {
+            "caption": "[text.outputV]",
+            "textvalue": "{workInfo.outputVoltage}",
+            "unit": "V"
+          },
+          {
+            "caption": "[text.outputF]",
+            "textvalue": "{workInfo.outputFrequency}",
+            "unit": "Hz"
+          },
+          {
+            "caption": "[label.loadLevel]",
+            "textvalue": "{workInfo.outputLoadPercent}",
+            "unit": "%"
+          }
+        ]
+      }
+    ]
+  },
+  "supportBatNum": false,
+  "version": "ViewPowerHTML V1.04-24215",
+  "webMapping": null,
+  "workInfo": {
+    "autoReboot": "----",
+    "baEq": false,
+    "batChargingCurrentN": "",
+    "batChargingCurrentP": "",
+    "batDisChargingCurrentN": "",
+    "batDisChargingCurrentP": "",
+    "batteryCapacity": 100,
+    "batteryCapacityReal": 0,
+    "batteryCapacitys": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    "batteryCutOffVoltage": "",
+    "batteryEqualizationVoltage": "",
+    "batteryLife": "",
+    "batteryRemainTime": 0,
+    "batteryTemp": "",
+    "batteryVoltage": "27.4",
+    "buzzerCtrl": true,
+    "bypassActive": false,
+    "bypassCurrent": "",
+    "bypassCurrentS": "",
+    "bypassCurrentT": "",
+    "bypassFrequency": "",
+    "bypassNotAllowed": "----",
+    "bypassOff": "----",
+    "bypassVoltage": "",
+    "bypassVoltageL1L2": "",
+    "bypassVoltageL1L3": "",
+    "bypassVoltageL2L3": "",
+    "bypassVoltageS": "",
+    "bypassVoltageT": "",
+    "cabinetTemp": "",
+    "canBatteryTest": false,
+    "changeA_MPPT": "",
+    "chargeCurr": "",
+    "chargeON": false,
+    "clear": false,
+    "converterMode": "----",
+    "cpuInfo": {
+      "load": 0,
+      "speed": 0,
+      "temp": 0
+    },
+    "currentTime": {
+      "date": 9,
+      "day": 3,
+      "hours": 22,
+      "minutes": 57,
+      "month": 9,
+      "seconds": 35,
+      "time": 1728507455905,
+      "timezoneOffset": -120,
+      "year": 124
+    },
+    "deviceId": "ID",
+    "dischargeCurr": "",
+    "dual": false,
+    "ecomode": "----",
+    "enableOutlet1": false,
+    "enableOutlet2": false,
+    "equalizationActiveStatus": false,
+    "equalizationOverTime": "",
+    "equalizationPeriod": "",
+    "equalizationTime": "",
+    "faultKind": "",
+    "faultType": "----:[fault.----]",
+    "first": false,
+    "groupNum": "----",
+    "heatsinkTemp1": "",
+    "heatsinkTemp2": "",
+    "inType": 0,
+    "independentBat": false,
+    "inputCurrentR": "",
+    "inputCurrentS": "",
+    "inputCurrentT": "",
+    "inputFrequency": "----",
+    "inputPowerPP": "",
+    "inputPowerPV": "",
+    "inputScaleFactor": "",
+    "inputVoltage": "226.2",
+    "inputVoltage2": "",
+    "inputVoltageL1L2": "",
+    "inputVoltageL1L3": "",
+    "inputVoltageL2L3": "",
+    "inputVoltagePV": "",
+    "inputVoltageS": "0",
+    "inputVoltageS2": "",
+    "inputVoltageT": "0",
+    "inputVoltageT2": "",
+    "inputWireType": "",
+    "insertBypass": false,
+    "insertInput": false,
+    "insertOutput": false,
+    "intputAngle": "",
+    "inverterHT": "",
+    "inverterHTView": "",
+    "inverterVoltage": "",
+    "inverterVoltageS": "",
+    "inverterVoltageT": "",
+    "ioPhase": "1/1",
+    "is10K": false,
+    "is3k": false,
+    "isnew": false,
+    "lastfaultID": "",
+    "ledInfo": {
+      "brightness": 0,
+      "colors": 0,
+      "effect": 0,
+      "info": "",
+      "info2": "",
+      "info3": "",
+      "ledStatus": 0,
+      "speed": 0
+    },
+    "loadLevel": "",
+    "loadLevelS": "",
+    "loadLevelT": "",
+    "lowV": false,
+    "maps": {},
+    "modul": 0,
+    "modulesInfo": [],
+    "morphological": "line-interactive",
+    "negativeBatteryCurrent": "",
+    "negativeBatteryVoltage": "",
+    "outType": "",
+    "outputAngle": "",
+    "outputCurrent": "",
+    "outputCurrentS": "",
+    "outputCurrentT": "",
+    "outputFrequency": "50.0",
+    "outputLoadPercent": "004",
+    "outputON": false,
+    "outputPowerFactorL1": "",
+    "outputPowerFactorL2": "",
+    "outputPowerFactorL3": "",
+    "outputRatingVoltage": 230,
+    "outputScaleFactor": "",
+    "outputVoltage": "228.2",
+    "outputVoltageL1L2": "",
+    "outputVoltageL1L3": "",
+    "outputVoltageL2L3": "",
+    "outputVoltageS": "0",
+    "outputVoltageT": "0",
+    "outputWireType": "",
+    "p1outlet": "----",
+    "parallelRack": false,
+    "positiveBatteryCurrent": "",
+    "positiveBatteryVoltage": "",
+    "positiveBusV": "",
+    "power_MPPT": "",
+    "ptid": "PMV",
+    "rectifierHt": "",
+    "rectifierHtView": "",
+    "settingChanged": false,
+    "showLabel": false,
+    "shutdownActive": false,
+    "solar": false,
+    "solarON": false,
+    "solarV_MPPT": "",
+    "temp1": "",
+    "temp2": "",
+    "temperature": "0",
+    "temperatureView": "0",
+    "totalPowerMPPT": "",
+    "upsType": "PMV",
+    "warnings": [
+      "----"
+    ],
+    "workId": 0,
+    "workMode": "Line mode"
+  }
+}
