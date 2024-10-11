@@ -1,0 +1,26 @@
+version: "1.0"
+type: dashboard-widget
+data:
+  id: 991ee6cc-741b-4fda-85bf-fc6471a61e97
+  permissions:
+    role:
+      - admin
+  title: _("UPS BatteryCapacity")
+  type: chart
+  reloadPeriod: 5000
+  chart:
+    type: gauge
+    maxHeight: "150px"
+    min: 0
+    max: 100
+    displayValue: true
+    request:
+      service: ViewPowerStat
+      method: getBatteryCapacityStats
+    label:
+      formatter: template
+      formatterConfig: "{{ value }}%"
+    dataConfig:
+      - label: _("Utilization")
+        prop: batteryCapacity
+        backgroundColor: "#5dacdf"

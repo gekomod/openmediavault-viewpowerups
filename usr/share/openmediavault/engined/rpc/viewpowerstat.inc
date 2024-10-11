@@ -25,6 +25,7 @@ class OMVRpcServiceViewPowerStat extends \OMV\Rpc\ServiceAbstract
     public function initialize()
     {
         $this->registerMethod("getStats");
+        $this->registerMethod("getBatteryCapacityStats");
     }
 
     public function getStats($params, $context)
@@ -63,4 +64,24 @@ Napięcie Wyjsciowe: '.$outputVoltage.'';
 }
         return ($temps);
     }
+
+    public function getBatteryCapacityStats($params, $context)
+    {
+        $db = \OMV\Config\Database::getInstance();
+        $object = $db->get("conf.service.viewpowerups");
+        $url = $object->get("urlViewPower");
+
+        if (FALSE === $object->get("enable")) {
+               $result = gettext("Service disabled");
+        } else {
+               $obj = json_decode(file_get_contents($url), true);
+               // Validate the RPC caller context.
+	       $this->validateMethodContext($context, [
+                       "role" => OMV_ROLE_ADMINISTRATOR
+	       ]);
+	$result = $obj['workInfo'];
+        }
+	return $result;
+    }
+
 }
