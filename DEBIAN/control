@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 13)
 Standards-Version: 1.0.0
 Homepage: http://omv-extras.org/
 Package: openmediavault-viewpowerups
-Version: 1.0
+Version: 1.1
 Architecture: all
 Depends: openmediavault (>= 7)
 Description: viewpowerups plugin for openmediavault
