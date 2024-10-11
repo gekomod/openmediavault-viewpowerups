@@ -32,6 +32,7 @@ case "$1" in
             rm -fr /tmp/ViewPower_linux_x64_text.tar.gz
             chmod 755 /tmp/ViewPower_linux_x64_text.sh
             /bin/sh /tmp/ViewPower_linux_x64_text.sh
+            ln -s /etc/init.d/upsMonitor /opt/UPS/upsMonitor
             echo "${RED}Installation Complet Continuate${ENDCOLOR}"
         fi
 
