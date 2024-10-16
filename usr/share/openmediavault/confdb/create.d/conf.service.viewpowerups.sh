@@ -29,6 +29,8 @@ SERVICE_XPATH="/config/services/${SERVICE_XPATH_NAME}"
 if ! omv_config_exists "${SERVICE_XPATH}"; then
     omv_config_add_node "/config/services" "${SERVICE_XPATH_NAME}"
     omv_config_add_key "${SERVICE_XPATH}" "enable" "0"
+    omv_config_add_key "${SERVICE_XPATH}" "buzzerCtrl" "true"
+    omv_config_add_key "${SERVICE_XPATH}" "canBatteryTest" "false"
     omv_config_add_key "${SERVICE_XPATH}" "urlViewPower" "111.222.333.444:PORT"
 fi
 

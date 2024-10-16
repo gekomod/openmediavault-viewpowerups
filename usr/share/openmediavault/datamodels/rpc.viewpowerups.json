@@ -11,6 +11,14 @@
 			"urlViewPower": {
 				"type": "string",
 				"required": true
+			},
+			"buzzerCtrl": {
+				"type": "boolean",
+				"default": true
+			},
+			"canBatteryTest": {
+				"type": "boolean",
+				"default": false
 			}
 		}
 	}

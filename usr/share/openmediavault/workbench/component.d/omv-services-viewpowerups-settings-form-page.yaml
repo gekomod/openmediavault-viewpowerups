@@ -19,6 +19,14 @@ data:
         name: urlViewPower
         label: _("ViewPower Json Url")
         value: true
+      - type: checkbox
+        name: buzzerCtrl
+        label: _("buzzerCtrl")
+        value: true
+      - type: checkbox
+        name: canBatteryTest
+        label: _("canBatteryTest")
+        value: false
     buttons:
       - template: submit
       - template: cancel

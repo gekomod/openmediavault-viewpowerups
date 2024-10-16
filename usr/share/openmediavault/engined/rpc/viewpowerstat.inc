@@ -49,17 +49,56 @@ $workmode = $obj['workInfo']['workMode'];
 $batteryCapacity = $obj['workInfo']['batteryCapacity'];
 if($obj['workInfo']['chargeON'] == false) { $chargeON = '<span style="color:red">Brak Ładowania</span>'; } else { $chargeOn = '<span style="color:green">Ładowanie Baterii</span>'; }
 $inputVoltage = $obj['workInfo']['inputVoltage'];
-$outputLoadPercent = $obj['workInfo']['outputLoadPercent'];
+$outputLoadPercent = (int) $obj['workInfo']['outputLoadPercent'];
 $outputVoltage = $obj['workInfo']['outputVoltage'];
+$outputFrequency = $obj['workInfo']['outputFrequency'];
 
-$temps = 'Napięcie bateri: '.$workinfo.'V<br>
-          Tryb Pracy: '.$workmode.'<br>
-         Battery Capacity: '.$batteryCapacity.'%<br>
-         Battery Charge: '.$chargeON.'<br>
-         Napięcie Wejsciowe: '.$inputVoltage.'<br>
-<Br>
-Obciązenie Wyjsciowe: '.$outputLoadPercent.'<br>
-Napięcie Wyjsciowe: '.$outputVoltage.'';
+$temps = '
+<section style="position: relative; margin-left: 1%;">
+	<article>
+		<table class ="fl">
+			<tr>
+				<td valign="top" >
+					<article style="padding: 25px 0 0 25px;">
+						<div id="statusinfo" style="min-width:500px;max-width:700px">
+								<h3>
+									Informacja wejściowa
+								</h3>
+								<table style="min-width:500px;max-width:700px">
+									<tr><td>Napięcie wejściowe:</td><td>'.$inputVoltage.'</td><td>V</td></tr>
+								</table>
+							
+								<h3>
+									Informacja o UPS
+								</h3>
+								<table style="min-width:500px;max-width:700px">
+									<tr><td>Tryb UPS:</td><td>'.$workmode.'</td><td></td></tr>
+								</table>
+							
+								<h3>
+									Informacja o akumulatorze
+								</h3>
+								<table style="min-width:500px;max-width:700px">
+									<tr><td>Napięcie akumulatora:</td><td>'.$workinfo.'</td><td>V</td></tr>
+									<tr><td>Pojemność akumulatora:</td><td>'.$batteryCapacity.'</td><td>%</td></tr>
+                                    <tr><td>Tryb Ładowania:</td><td>'.$chargeON.'</td><td></td></tr>
+								</table>
+							
+								<h3>
+									Informacja z wyjścia
+								</h3>
+								<table style="min-width:500px;max-width:700px">
+									<tr><td>Napięcie wyjściowe:</td><td>'.$outputVoltage.'</td><td>V</td></tr>
+									<tr><td>Częstotliwość wyjściowa:</td><td>'.$outputFrequency.'</td><td>Hz</td></tr>
+									<tr><td>Poziom obciążenia:</td><td>'.$outputLoadPercent.'</td><td>%</td></tr>
+								</table>
+						</div>
+					</article>
+				</td>
+			</tr>
+		</table>
+	</article>
+</section>';
 
 }
         return ($temps);
